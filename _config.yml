@@ -1,6 +1,6 @@
-title: "Maleek's Personal Blog"
-description: "Flutter dev • building tools, apps, and writing thoughts."
-url: "https://elmaleek03.github.io" # change to your real URL
+title: "Maleek's Web"
+description: "Maleek's personal blog. I write about tech, programming, and everything else that interests me."
+url: "https://elmaleek.me" # change to your real URL
 baseurl: ""                       # keep "" for username.github.io root
 
 # Build settings

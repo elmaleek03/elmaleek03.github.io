@@ -7,19 +7,18 @@ title: Home
 <section class="hero">
   <h1 class="hero__title">Hello, I’m <span class="accent">Maleek</span>.</h1>
   <p class="hero__subtitle">
-  I like building useful things and fixing broken ones.
-  I work across mobile apps, backend, and IT and Networking systems.
+  I enjoy building useful things and figuring out how they work, and sometimes why they break. I work from mobile apps, backend services, to IT/networking.
 </p>
 
 <div class="hero__meta">
-  <span>💻 Builder • Software Developer • IT Engineer</span>
+  <span>💻 Software Developer • Builder • IT Engineer</span>
   <span>🧰 Flutter • Go • C# • Firebase • Networking</span>
   <span>📍 Depok, Indonesia</span>
 </div>
 </section>
 
  <div class="hero__cta">
-    <a class="btn btn--primary" href="/blog/">About me</a>
+    <a class="btn btn--primary" href="/blog/">About me →</a>
     <!-- <a class="btn btn--ghost" href="/about/">About me</a> -->
   </div>
   

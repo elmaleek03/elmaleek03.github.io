@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Building Useful Things (and Fixing Broken Ones)"
+title: "[AI] [Example] Building Useful Things"
 subtitle: "A short note on why I like practical engineering: shipping, maintaining, and learning from real systems."
 date: 2026-02-14 02:30:00 +0700
-tags: [thoughts, dev, ops]
+tags: [thoughts, dev, ai, example]
 reading_time: 5
 excerpt: "A practical engineer’s view: ship, operate, learn, repeat."
 ---
@@ -33,7 +33,7 @@ When something breaks, I try to do two things:
 That usually means writing notes, adding a tiny script, or improving monitoring so the next incident is easier.
 
 <div class="grid2">
-  <img src="https://images.unsplash.com/photo-1551703599-6b3e8379aa8f?auto=format&fit=crop&w=1200&q=80" alt="Network cables" />
+  <img src="https://images.unsplash.com/photo-1520869562399-e772f042f422?auto=format&fit=crop&w=1200&q=80" alt="Network cables" />
   <img src="https://images.unsplash.com/photo-1555617981-dac3880eac6e?auto=format&fit=crop&w=1200&q=80" alt="Server rack" />
 </div>
 

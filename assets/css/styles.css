@@ -266,3 +266,281 @@ a:hover { opacity: .92; }
   .post__content { font-size: 16px; line-height: 1.75; }
   .grid2 { grid-template-columns: 1fr; }
 }
+
+/* ===== Blog page ===== */
+.blogpage__head {
+  padding: 10px 0 18px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 18px;
+}
+
+.blogpage__title {
+  margin: 0 0 6px;
+  font-size: 42px;
+  letter-spacing: -0.6px;
+}
+
+.blogpage__subtitle {
+  margin: 0;
+  color: var(--muted);
+  max-width: 70ch;
+}
+
+/* Reuse home "postlist" look */
+.postlist {
+  display: grid;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.postcard {
+  border: 1px solid var(--line);
+  background: rgba(17, 21, 34, 0.55);
+  border-radius: 18px;
+  padding: 16px 16px 14px;
+  transition: transform .15s ease, border-color .15s ease, background .15s ease;
+}
+
+.postcard:hover {
+  transform: translateY(-1px);
+  border-color: rgba(124, 92, 255, 0.35);
+  background: rgba(17, 21, 34, 0.70);
+}
+
+.postcard__top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.postcard__title {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: -0.2px;
+}
+
+.postcard__title a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.postcard__title a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.postcard__date {
+  color: var(--muted);
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.postcard__excerpt {
+  margin: 10px 0 12px;
+  color: var(--muted);
+}
+
+.postcard__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.postcard__tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* small primary button */
+.btn--sm {
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+/* Mobile tweaks */
+@media (max-width: 560px) {
+  .blogpage__title { font-size: 32px; }
+  .postcard { padding: 14px; }
+  .postcard__top { flex-direction: column; align-items: flex-start; }
+  .postcard__date { margin-top: 4px; }
+}
+
+.btn--primary { font-weight: 600; }
+.btn--sm { font-weight: 600; }
+
+/* ===== About page ===== */
+.aboutpage {
+  padding: 10px 0 26px;
+}
+
+.aboutpage__grid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.aboutcard {
+  border: 1px solid var(--line);
+  background: rgba(17, 21, 34, 0.55);
+  border-radius: 18px;
+  padding: 16px;
+}
+
+.aboutcard__title {
+  margin: 0 0 10px;
+  font-size: 16px;
+  letter-spacing: -0.2px;
+}
+
+.aboutcard__list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+.aboutcard__list li { margin: 8px 0; }
+
+.aboutcard__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 6px 0 10px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(11, 13, 18, 0.55);
+}
+
+.chip__label { color: var(--text); font-size: 13px; }
+.chip__level { opacity: 0.7; color: var(--muted); font-size: 12px; }
+
+
+.aboutcard__note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.aboutpage__actions {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Make CV button stand out but not huge */
+.btn--cv {
+  margin-left: auto;
+}
+
+@media (max-width: 720px) {
+  .aboutpage__grid { grid-template-columns: 1fr; }
+  .btn--cv { margin-left: 0; width: 100%; justify-content: center; }
+}
+
+/* Social icons under bio */
+.about__socials {
+  display: flex;
+  gap: 14px;
+  margin: 14px 0 6px;
+}
+
+.about__socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  font-size: 18px;
+  text-decoration: none;
+
+  border-radius: 50%;
+  border: 1px solid var(--line);
+
+  background: rgba(17,21,34,0.6);
+  transition: all .2s ease;
+}
+
+.about__socials a:hover {
+  transform: translateY(-2px);
+  border-color: rgba(124,92,255,0.5);
+  background: rgba(124,92,255,0.15);
+}
+
+/* ===== Social icon row ===== */
+.socials {
+  display: flex;
+  gap: 10px;
+  margin: 14px 0 18px;
+}
+
+.social {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: rgba(17, 21, 34, 0.55);
+
+  color: var(--text);
+  text-decoration: none;
+
+  transition: transform .15s ease, border-color .15s ease, background .15s ease;
+}
+
+.social:hover {
+  transform: translateY(-1px);
+  border-color: rgba(124, 92, 255, 0.45);
+  background: rgba(17, 21, 34, 0.75);
+}
+
+.social__icon {
+  width: 18px;
+  height: 18px;
+  opacity: 0.9;
+}
+
+/* ===== About spacing fixes ===== */
+
+.aboutpage__sectiontitle {
+  font-size: 16px;
+  margin: 26px 0 12px;
+  color: var(--text);
+  opacity: 1.0;
+}
+
+/* block containing links */
+.aboutpage__links {
+  margin-top: 18px;
+  margin-bottom: 28px;
+}
+
+/* socials row */
+.socials {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+/* CV button spacing */
+.aboutpage__actions {
+  margin-top: 6px;
+}
