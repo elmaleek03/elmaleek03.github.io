@@ -434,6 +434,7 @@ a:hover { opacity: .92; }
 }
 
 .aboutpage__actions {
+  /* justify-content: flex-start; */
   margin-top: 16px;
   display: flex;
   flex-wrap: wrap;
@@ -442,13 +443,11 @@ a:hover { opacity: .92; }
 }
 
 /* Make CV button stand out but not huge */
-.btn--cv {
-  margin-left: auto;
-}
+
 
 @media (max-width: 720px) {
   .aboutpage__grid { grid-template-columns: 1fr; }
-  .btn--cv { margin-left: 0; width: 100%; justify-content: center; }
+  .btn--cv { margin-left: 0; width: 100%; justify-content: flex-start; }
 }
 
 /* Social icons under bio */
@@ -542,5 +541,11 @@ a:hover { opacity: .92; }
 
 /* CV button spacing */
 .aboutpage__actions {
-  margin-top: 6px;
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+
+  justify-content: flex-start;
 }

@@ -46,12 +46,11 @@ I like figuring out how systems work, breaking them (sometimes by accident), and
 </div>
 
   <div class="aboutpage__actions">
-    <a class="btn btn--primary btn--cv" href="/assets/cv.pdf" target="_blank">
-      Download Resume (PDF)
+    <a class="btn btn--primary btn--cv" href="/assets/Resume.pdf" target="_blank">
+      Download My Resume (PDF)
     </a>
   </div>
 </div>
-
 
 
   </div>
