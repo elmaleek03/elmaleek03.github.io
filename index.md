@@ -5,22 +5,24 @@ title: Home
 
 <!-- Hero -->
 <section class="hero">
-  <h1 class="hero__title">Hi, I’m <span class="accent">Your Name</span>.</h1>
+  <h1 class="hero__title">Hello, I’m <span class="accent">Maleek</span>.</h1>
   <p class="hero__subtitle">
-    Mobile app developer (Flutter). I build practical tools, experiment with backend/infra,
-    and write my thoughts here.
-  </p>
+  I like building useful things and fixing broken ones.
+  I work across mobile apps, backend, and IT and Networking systems.
+</p>
 
-  <div class="hero__cta">
-    <a class="btn btn--primary" href="/blog/">Read the blog</a>
-    <a class="btn btn--ghost" href="/about/">About me</a>
-  </div>
-
-  <div class="hero__meta">
-    <span>📍 Indonesia</span>
-    <span>🧰 Flutter • Firebase • Go • AWS</span>
-  </div>
+<div class="hero__meta">
+  <span>💻 Builder • Software Developer • IT Engineer</span>
+  <span>🧰 Flutter • Go • C# • Firebase • Networking</span>
+  <span>📍 Depok, Indonesia</span>
+</div>
 </section>
+
+ <div class="hero__cta">
+    <a class="btn btn--primary" href="/blog/">About me</a>
+    <!-- <a class="btn btn--ghost" href="/about/">About me</a> -->
+  </div>
+  
 
 <hr class="sep" />
 

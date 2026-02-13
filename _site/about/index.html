@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 
     <title>
-      {% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}
+      About · Maleek's Personal Blog
     </title>
 
-    <meta name="description" content="{{ page.description | default: site.description }}" />
+    <meta name="description" content="Flutter dev • building tools, apps, and writing thoughts." />
 
-    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+    <link rel="stylesheet" href="/assets/css/styles.css">
   </head>
 
   <body>
     <header class="nav">
       <div class="container nav__inner">
-        <a class="nav__brand" href="/">{{ site.title }}</a>
+        <a class="nav__brand" href="/">Maleek's Personal Blog</a>
 
         <nav class="nav__links">
           <a href="/blog/">Blog</a>
@@ -26,12 +26,21 @@
     </header>
 
     <main class="container page">
-      {{ content }}
+      <h1 id="about-me">About me</h1>
+
+<p>Write your short bio here.</p>
+
+<ul>
+  <li>What you do</li>
+  <li>What you’re building</li>
+  <li>Links (GitHub, email, etc.)</li>
+</ul>
+
     </main>
 
     <footer class="footer">
       <div class="container footer__inner">
-        <span>© {{ "now" | date: "%Y" }} Built with 💖</span>
+        <span>© 2026 Built with 💖</span>
         <!-- <span class="muted"></span> -->
       </div>
     </footer>

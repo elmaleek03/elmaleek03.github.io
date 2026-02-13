@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<article class="post">
+  <header class="post__header">
+    <h1 class="post__title">{{ page.title }}</h1>
+
+    {% if page.subtitle %}
+      <p class="post__subtitle">{{ page.subtitle }}</p>
+    {% endif %}
+
+    <div class="post__meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: "%d %b %Y" }}
+      </time>
+
+      {% if page.reading_time %}
+        <span class="dot">•</span>
+        <span>{{ page.reading_time }} min read</span>
+      {% endif %}
+
+      {% if page.tags %}
+        <span class="dot">•</span>
+        <span class="post__tags">
+          {% for tag in page.tags %}
+            <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </span>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="post__content">
+    {{ content }}
+  </div>
+
+  <footer class="post__footer">
+    <a class="btn btn--ghost" href="/blog/">← Back to Blog</a>
+  </footer>
+</article>
