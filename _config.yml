@@ -1,0 +1,21 @@
+title: "Fajar Malik Abdillah Iman"
+description: "Flutter dev • building tools, apps, and writing thoughts."
+url: "https://elmaleek03.github.io" # change to your real URL
+baseurl: ""                       # keep "" for username.github.io root
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:title/
+timezone: Asia/Jakarta
+
+# Optional: show future-dated posts? keep false
+future: false
+
+# Small defaults for posts
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      author: "Your Name"
