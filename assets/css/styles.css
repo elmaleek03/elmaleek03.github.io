@@ -138,7 +138,7 @@ a { color: inherit; text-decoration: none; }
 
 /* ---------- Hero (fastfetch-style) ---------- */
 .hero { padding-top: 6px; padding-bottom: 30px; }
-.hero__line { margin: 0 0 14px; }
+.hero__line { margin: 0 0 14px; font-size: 12px; }
 .hero__line .prompt { user-select: none; }
 
 .fetch {
