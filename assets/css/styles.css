@@ -146,7 +146,7 @@ a { color: inherit; text-decoration: none; }
   max-width: 100%;
 }
 
-.fetch__art { flex: 0 0 auto; min-width: 0; max-width: 100%; }
+.fetch__art { flex: 0 0 auto; min-width: 0; max-width: 100%; overflow: hidden; }
 .fetch__info { flex: 1 1 auto; min-width: 0; font-size: 13px; }
 
 /* info panel (no border/background) */
@@ -205,22 +205,24 @@ a { color: inherit; text-decoration: none; }
   flex-wrap: wrap;
 }
 
-/* ascii art block */
+/* ascii art block
+   Font size uses clamp(vw) so it scales with the viewport (defeats webview
+   font autosizing in FB/IG in-app browsers) but is capped so it never
+   dominates the layout on wide desktop screens. Line-height stays
+   proportional (~1.1x) to keep the 1:2 character cell ratio (square art). */
 .ascii-face {
   margin: 0;
   padding: 0;
   color: #8fb98d;
+  opacity: 0.85;
   font-family: "SF Mono", "Menlo", "Consolas", "DejaVu Sans Mono",
     "Liberation Mono", "Courier New", monospace;
-  font-size: 4px;
-  /* unitless line-height scales with font-size, keeping ~1:2 char cells
-     (square-looking art) on every device/font, including mobile autosizing */
-  line-height: 1.1;
+  font-size: clamp(2.2px, 0.34vw, 2.9px);
+  line-height: clamp(2.42px, 0.374vw, 3.19px);
   letter-spacing: 0;
   white-space: pre;
   overflow: visible;
   max-width: 100%;
-  opacity: 0.85;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
@@ -522,8 +524,8 @@ a { color: inherit; text-decoration: none; }
   .aboutpage__grid { grid-template-columns: 1fr; }
   .grid2 { grid-template-columns: 1fr; }
 
-  /* shrink the ascii art further so it never forces horizontal overflow */
-  .ascii-face { font-size: 3px; }
+  /* ascii art: scale with viewport (vw) so webviews can't inflate it */
+  .ascii-face { font-size: clamp(2.2px, 0.9vw, 3.4px); line-height: clamp(2.42px, 0.99vw, 3.74px); }
   .fetch__key { min-width: 7ch; }
   .fetch__icon { width: 1.2em; }
 }
