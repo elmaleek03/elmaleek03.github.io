@@ -1,81 +1,35 @@
-# 🌐 elmaleek.me — Personal Site & Blog
+# elmaleek.me
 
-This repository contains the source code for my personal website and blog:
+Source for my personal site and blog: https://elmaleek.me
 
-👉 https://elmaleek.me
+A static site for writing about what I build, learn, and tinker with.
 
-A simple, fast, and developer-focused site where I share what I’m building, learning, and experimenting with.
+## Stack
 
----
+- Jekyll (static site generator)
+- GitHub Pages (hosting)
+- Markdown (content), Liquid (templating)
+- Handwritten HTML/CSS, no frameworks or JavaScript
 
-## ✨ About
+## Local development
 
-This site serves as:
-
-- Personal portfolio  
-- Technical blog  
-- Notes on things I build and learn  
-- A place to share tutorials, tips, and thoughts  
-
-Content is written in Markdown and built into a static site.
-
----
-
-## 🛠 Tech Stack
-
-- **Jekyll** — static site generator  
-- **GitHub Pages** — hosting  
-- **Markdown** — content writing  
-- **HTML/CSS** — custom styling  
-- **Liquid** — templating  
-
-No database, no CMS, no heavy frameworks.
-
----
-
-## 🚀 Local Development
-
-### Install dependencies
+Install dependencies:
 
 ```bash
 bundle install
 ```
 
-### Run locally
+Run the dev server:
 
 ```bash
-bundle exec jekyll serve --livereload
+bundle exec jekyll serve
 ```
 
-Open in browser:
+Then open http://127.0.0.1:4000.
 
-```
-http://127.0.0.1:4000
-```
+## Writing a post
 
----
-
-## ✍️ Writing a Post
-
-Create a file inside:
-
-```
-_posts/
-```
-
-Filename format:
-
-```
-YYYY-MM-DD-title.md
-```
-
-Example:
-
-```
-2026-02-14-my-post.md
-```
-
-Basic front matter:
+Add a Markdown file to `_posts/` named `YYYY-MM-DD-title.md`:
 
 ```md
 ---
@@ -83,47 +37,27 @@ layout: post
 title: "My Post Title"
 subtitle: "Optional subtitle"
 tags: [dev, learning]
-excerpt: "Short description for blog cards."
+excerpt: "Short description shown in the post list."
 ---
+
+Post content in Markdown.
 ```
 
-Then write your content in Markdown.
+Push to `master` and GitHub Pages rebuilds automatically.
 
-Push to the main branch and GitHub Pages will build automatically.
-
----
-
-## 📁 Project Structure
+## Structure
 
 ```
-_layouts/      → page layouts  
-_posts/        → blog posts  
-assets/        → images, CSS, files  
-_config.yml    → site config  
-index.md       → homepage  
-about.md       → about page  
+_layouts/     page layouts
+_includes/    reusable fragments
+_posts/       blog posts
+assets/       CSS, images, files
+_config.yml   site config
+index.md      homepage
+about.md      about page
+blog.md       blog index
 ```
 
----
+## License
 
-## 🎯 Goals
-
-- Keep it simple  
-- Fast loading  
-- Easy to write content  
-- Minimal maintenance  
-- Focus on writing, not tooling  
-
----
-
-## 📬 Contact
-
-- Website: https://elmaleek.me  
-- GitHub: https://github.com/elmaleek03  
-
----
-
-## 📄 License
-
-Open for learning and inspiration.  
-Content is personal unless stated otherwise.
+Personal content unless stated otherwise. Code is open for reference.
