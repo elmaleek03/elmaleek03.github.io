@@ -5,35 +5,53 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 
     <title>
-      {% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}
+      {% if page.title %}{{ page.title }} · {% endif %}visitor@elmaleeks-website:~$
     </title>
 
     <meta name="description" content="{{ page.description | default: site.description }}" />
 
+    <link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
   </head>
 
   <body>
-    <header class="nav">
-      <div class="container nav__inner">
-        <a class="nav__brand" href="/">{{ site.title }}</a>
-
-        <nav class="nav__links">
-          <a href="/blog/">Blog</a>
-          <a href="/about/">About</a>
-        </nav>
+    <div class="terminal">
+      <div class="titlebar">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="titlebar__title">visitor@elmaleeks-website:~$</span>
       </div>
-    </header>
 
-    <main class="container page">
-      {{ content }}
-    </main>
+      <nav class="nav">
+        <div class="nav__links">
+          <a href="/" class="{% if page.url == '/' %}is-active{% endif %}">~/home</a>
+          <a href="/blog/" class="{% if page.url contains '/blog' %}is-active{% endif %}">~/blog</a>
+          <a href="/about/" class="{% if page.url == '/about/' %}is-active{% endif %}">~/about</a>
+        </div>
+      </nav>
 
-    <footer class="footer">
-      <div class="container footer__inner">
-        <span>© {{ "now" | date: "%Y" }} Built with 💖 by me</span>
-        <!-- <span class="muted"></span> -->
-      </div>
-    </footer>
+      <main class="page">
+        {{ content }}
+      </main>
+
+      <footer class="footer">
+        <div class="footer__inner">
+          <span class="footer__left">
+            <span class="footer__item footer__branch">⎇ main</span>
+            <span class="footer__item">UTF-8</span>
+            <span class="footer__item">LF</span>
+            <span class="footer__item">Ln 1, Col 1</span>
+            <span class="footer__item">Spaces: 2</span>
+          </span>
+          <span class="footer__right">
+            <span class="footer__item footer__ok">●</span>
+            <span class="footer__item">Jekyll</span>
+            <span class="footer__item">Markdown</span>
+            <span class="footer__item">© {{ "now" | date: "%Y" }} {{ site.title }}</span>
+          </span>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

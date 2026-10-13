@@ -3,33 +3,45 @@ layout: home
 title: Home
 ---
 
-<!-- Hero -->
+<!-- Hero: fastfetch-style fetch output -->
 <section class="hero">
-  <h1 class="hero__title">Hello, I’m <span class="accent">Maleek</span>.</h1>
-  <p class="hero__subtitle">
-  I like building things, solving problems, and learning as I go. I mostly work on mobile apps, backend stuff, and IT/networking.
-</p>
+  <p class="hero__line"><span class="prompt">visitor@elmaleeks-website:~$</span> fetch<span class="cursor"></span></p>
 
-<div class="hero__meta">
-  <span>💻 Software Developer • System Engineer • IT Generalist</span>
-  <span>🧰 Flutter • Go • C# • Firebase • Networking</span>
-  <span>📍 Depok, Indonesia</span>
-</div>
-</section>
+  <div class="fetch">
+    <div class="fetch__art">
+      {% include ascii-face.html %}
+    </div>
 
- <div class="hero__cta">
-    <a class="btn btn--primary" href="/about/">About me →</a>
-    <!-- <a class="btn btn--ghost" href="/about/">About me</a> -->
+    <div class="fetch__info">
+      <div class="fetch__box">
+        <div class="fetch__group">Hello</div>
+
+        <div class="fetch__row"><span class="fetch__icon">▸</span><span class="fetch__key">Name:</span><span class="fetch__val fetch__val--accent">Fajar Malik Abdillah Iman</span></div>
+        <div class="fetch__row"><span class="fetch__icon">▸</span><span class="fetch__key">About:</span><span class="fetch__val">I like building things, solving problems, and learning as I go. Mostly mobile apps, backend services, and IT/networking.</span></div>
+
+        <hr class="fetch__sep" />
+
+        <div class="fetch__row"><span class="fetch__icon">▸</span><span class="fetch__key">Stack:</span><span class="fetch__val fetch__val--accent">Flutter · Go · C# · Firebase · Networking</span></div>
+        <div class="fetch__row"><span class="fetch__icon">▸</span><span class="fetch__key">Focus:</span><span class="fetch__val">Mobile apps · Backend services · IT / Networking</span></div>
+
+        <hr class="fetch__sep" />
+
+        <div class="fetch__row"><span class="fetch__icon">▸</span><span class="fetch__key">Location:</span><span class="fetch__val">Depok, Indonesia</span></div>
+      </div>
+
+      <div class="fetch__footer">
+        <a class="btn btn--primary" href="/about/">more about me →</a>
+      </div>
+    </div>
   </div>
-  
+</section>
 
 <hr class="sep" />
 
-<!-- Featured / Latest posts -->
+<!-- Latest posts -->
 <section>
   <div class="section__head">
-    <h2>Latest writing</h2>
-    <a class="muted" href="/blog/">View all →</a>
+    <h2>latest writing</h2>
   </div>
 
   <div class="postlist">
@@ -38,22 +50,23 @@ title: Home
         <div class="postcard__top">
           <h3 class="postcard__title">{{ post.title }}</h3>
           <time class="postcard__date" datetime="{{ post.date | date_to_xmlschema }}">
-            {{ post.date | date: "%d %b %Y" }}
+            {{ post.date | date: "%Y-%m-%d" }}
           </time>
+          {% if post.tags %}
+            <span class="postcard__tags">
+              {% for tag in post.tags limit: 3 %}<span class="tag">{{ tag }}</span>{% endfor %}
+            </span>
+          {% endif %}
         </div>
 
         {% if post.excerpt %}
-          <p class="postcard__excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>
+          <p class="postcard__excerpt">{{ post.excerpt | strip_html | truncate: 140 }}</p>
         {% endif %}
-
-        <div class="postcard__tags">
-          {% if post.tags %}
-            {% for tag in post.tags limit: 3 %}
-              <span class="tag">{{ tag }}</span>
-            {% endfor %}
-          {% endif %}
-        </div>
       </a>
     {% endfor %}
+  </div>
+
+  <div class="section__foot">
+    <a class="btn btn--primary" href="/blog/">see all writing →</a>
   </div>
 </section>
