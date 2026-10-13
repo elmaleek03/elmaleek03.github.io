@@ -16,7 +16,7 @@ title: Home
       <div class="fetch__box">
         <div class="fetch__group">Hello</div>
 
-        <div class="fetch__row"><span class="fetch__icon">▸</span><span class="fetch__key">Name:</span><span class="fetch__val fetch__val--accent">Fajar Malik Abdillah Iman</span></div>
+        <div class="fetch__row"><span class="fetch__icon">▸</span><span class="fetch__key">Name:</span><span class="fetch__val fetch__val--accent">Fajar Iman</span></div>
         <div class="fetch__row"><span class="fetch__icon">▸</span><span class="fetch__key">About:</span><span class="fetch__val">I like building things, solving problems, and learning as I go. Mostly mobile apps, backend services, and IT/networking.</span></div>
 
         <hr class="fetch__sep" />
@@ -52,11 +52,6 @@ title: Home
           <time class="postcard__date" datetime="{{ post.date | date_to_xmlschema }}">
             {{ post.date | date: "%Y-%m-%d" }}
           </time>
-          {% if post.tags %}
-            <span class="postcard__tags">
-              {% for tag in post.tags limit: 3 %}<span class="tag">{{ tag }}</span>{% endfor %}
-            </span>
-          {% endif %}
         </div>
 
         {% if post.excerpt %}
