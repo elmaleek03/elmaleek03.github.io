@@ -7,17 +7,15 @@ permalink: /about/
 <section class="aboutpage">
   <div class="blogpage__head">
     <h1 class="blogpage__title">about</h1>
-    <p class="blogpage__subtitle">
-      Tech enthusiast who enjoys discovering new things, solving problems, and building solutions.
-      I mostly work on mobile apps, backend services, and IT/networking.
-      <br><br>
-      I like figuring out how systems work, breaking them (sometimes by accident), and making them better.
-      This site is where I share what I'm learning, building, and experimenting with along the way.
-    </p>
+    <div class="about__rows">
+      <div class="fetch__row"><span class="fetch__icon">></span><span class="fetch__key">Name:</span><span class="fetch__val fetch__val--accent">Fajar Iman</span></div>
+      <div class="fetch__row"><span class="fetch__icon">></span><span class="fetch__key">Role:</span><span class="fetch__val">Software developer, system engineer</span></div>
+      <div class="fetch__row"><span class="fetch__icon">></span><span class="fetch__key">Loc:</span><span class="fetch__val">Depok, Indonesia</span></div>
+    </div>
   </div>
 
   <div class="aboutpage__links">
-    <h2 class="aboutpage__sectiontitle">links</h2>
+    <h2 class="aboutpage__sectiontitle">don't be shy, you can reach me via my socials below</h2>
 
     <div class="socials">
       <a class="social" href="mailto:fajarmalik.45@gmail.com" aria-label="Email">

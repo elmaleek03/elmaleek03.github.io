@@ -14,23 +14,19 @@ title: Home
 
     <div class="fetch__info">
       <div class="fetch__box">
-        <div class="fetch__group">Hello</div>
+        <div class="fetch__group">Hello World</div>
 
-        <div class="fetch__row"><span class="fetch__icon">▸</span><span class="fetch__key">Name:</span><span class="fetch__val fetch__val--accent">Fajar Iman</span></div>
-        <div class="fetch__row"><span class="fetch__icon">▸</span><span class="fetch__key">About:</span><span class="fetch__val">I like building things, solving problems, and learning as I go. Mostly mobile apps, backend services, and IT/networking.</span></div>
+        <div class="fetch__output">
+          <p>I'm Fajar Iman, a tech enthusiast who enjoys discovering new things, solving problems, and building solutions. Currently most of my days go into mobile apps, backend services, and IT/networking.</p>
 
-        <hr class="fetch__sep" />
+          <p>I like figuring out how systems work, breaking them (sometimes), and making them better. This site is where I share what I'm learning, building, and experimenting with along the way. I hope i could share and write my journeys here lol.</p>
 
-        <div class="fetch__row"><span class="fetch__icon">▸</span><span class="fetch__key">Stack:</span><span class="fetch__val fetch__val--accent">Flutter · Go · C# · Firebase · Networking</span></div>
-        <div class="fetch__row"><span class="fetch__icon">▸</span><span class="fetch__key">Focus:</span><span class="fetch__val">Mobile apps · Backend services · IT / Networking</span></div>
+          <p class="fetch__output-note"><span class="fetch__caret">&gt;</span> Currently learning on CI/CD, Deployment, Ubuntu Servers, and AI Orchestration.</p>
+        </div>
 
-        <hr class="fetch__sep" />
-
-        <div class="fetch__row"><span class="fetch__icon">▸</span><span class="fetch__key">Location:</span><span class="fetch__val">Depok, Indonesia</span></div>
-      </div>
-
-      <div class="fetch__footer">
-        <a class="btn btn--primary" href="/about/">more about me →</a>
+        <div class="fetch__footer">
+          <a class="btn btn--primary" href="/about/">more about me →</a>
+        </div>
       </div>
     </div>
   </div>
